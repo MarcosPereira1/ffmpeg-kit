@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'ffmpeg_kit_flutter'
-  s.version          = '6.0.3'
+  s.version          = '6.0.2'
   s.summary          = 'FFmpeg Kit for Flutter'
   s.description      = 'A Flutter plugin for running FFmpeg and FFprobe commands.'
   s.homepage         = 'https://github.com/arthenica/ffmpeg-kit'
@@ -51,7 +51,9 @@ Pod::Spec.new do |s|
   s.subspec 'https' do |ss|
     ss.source_files         = 'Classes/**/*'
     ss.public_header_files  = 'Classes/**/*.h'
-    ss.dependency 'ffmpeg-kit-ios-https', "6.0"
+    ss.ios.dependency 'ffmpeg-kit-ios-https', 
+      :http => 'https://github.com/MarcosPereira1/ffmpeg-kit/releases/download/v6.0-patched/FFmpegKit.Flutter.v6.0.3.zip',
+      :sha256 => '109c12b2fd000acba24388cf26379cf63bce9fc757a0cb490f4bd680941e72d4'
     ss.ios.deployment_target = '12.1'
   end
 
